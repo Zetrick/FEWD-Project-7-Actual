@@ -174,7 +174,7 @@ section:nth-child(n + 4) {
   position: absolute;
   top: 60px;
   right: 8%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .notification-header .notification-list ul li {
@@ -246,6 +246,7 @@ svg {
   fill: white;
   position: sticky;
   top: 0;
+  z-index: 3;
 }
 
 .main-nav ul {
@@ -629,7 +630,7 @@ input[type=text] {
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
-  z-index: 99;
+  z-index: 2;
   /*position the autocomplete items to be the same width as the container:*/
   top: 72%;
   left: 0;

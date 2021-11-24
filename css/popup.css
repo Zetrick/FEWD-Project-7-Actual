@@ -64,14 +64,6 @@
     }
 }
 
-body,
-html,
-root,
-document {
-    display: block;
-    height: 500px;
-}
-
 .popUpFundo {
     display: none;
     position: fixed;
