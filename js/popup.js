@@ -26,7 +26,6 @@ janelaPopUp.abre = function (id, classes, titulo, corpo, functionCancelar, funct
     });
     var popFundo = '<div id="popFundo_' + id + '" class="popUpFundo ' + classesFundo + '"></div>'
     var janela = '<div id="' + id + '" class="popUp ' + classes + '"><h1>' + titulo + "</h1><div><span>" + corpo + "</span></div><button class='puCancelar " + classBot + "' id='" + id + "_cancelar' data-parent=" + id + ">" + cancelar + "</button><button class='puEnviar " + classBot + "' data-parent=" + id + " id='" + id + "_enviar'>" + enviar + "</button></div>";
-    $("window, body").css('overflow', 'hidden');
 
     $("body").append(popFundo);
     $("body").append(janela);
