@@ -1,0 +1,41 @@
+.notification-dot {
+        height: 13px;
+        width: 13px;
+        line-height: 13px;
+        background-color: lightgreen;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: -22px;
+        vertical-align: 33px;
+        color: black;
+        font-size: .7em;
+        text-align: center;
+}
+
+button,
+select,
+.switch-candy,
+.social-container {
+    cursor: pointer;
+}
+
+.menu-item-animation {
+    transition: transform .2s ease-in-out;
+}
+
+.menu-item-animation:hover {
+    transform: scale(1.1);
+}
+
+.button-primary,
+.button-disabled {
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+    &:active {
+        transition: transform .05s;
+        transform: scale(1);
+    }
+}

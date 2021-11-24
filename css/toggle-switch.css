@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/*
+* CSS TOGGLE SWITCH
+*
+* Ionuț Colceriu - ghinda.net
+* https://github.com/ghinda/css-toggle-switch
+*
+*
+
+/* We can't test for a specific feature,
+ * so we only target browsers with support for media queries.
+ */
+@media only screen {
+
+    /* Checkbox
+ */
+    .switch-light {
+        position: relative;
+        display: block;
+        /* simulate default browser focus outlines on the switch,
+   * when the inputs are focused.
+   */
+    }
+
+    .switch-light::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+
+    .switch-light *,
+    .switch-light *:before,
+    .switch-light *:after {
+        box-sizing: border-box;
+    }
+
+    .switch-light a {
+        display: block;
+        transition: all 0.2s ease-out;
+    }
+
+    .switch-light label,
+    .switch-light>span {
+        /* breathing room for bootstrap/foundation classes.
+     */
+        line-height: 2em;
+    }
+
+    .switch-light input:focus~span a,
+    .switch-light input:focus+label {
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: Highlight;
+        /* Chrome/Opera gets its native focus styles.
+     */
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 0) {
+
+    .switch-light input:focus~span a,
+    .switch-light input:focus+label {
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+    }
+}
+
+@media only screen {
+
+    /* don't hide the input from screen-readers and keyboard access
+ */
+    .switch-light input {
+        position: absolute;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .switch-light input:checked~span a {
+        right: 0%;
+    }
+
+    /* inherit from label
+ */
+    .switch-light strong {
+        font-weight: inherit;
+    }
+
+    .switch-light>span {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        min-height: 2em;
+        /* overwrite 3rd party classes padding
+   * eg. bootstrap .alert
+   */
+        padding: 0;
+        text-align: left;
+    }
+
+    .switch-light span span {
+        position: relative;
+        z-index: 2;
+        display: block;
+        float: left;
+        width: 50%;
+        text-align: center;
+        user-select: none;
+    }
+
+    .switch-light a {
+        position: absolute;
+        right: 50%;
+        top: 0;
+        z-index: 1;
+        display: block;
+        width: 50%;
+        height: 100%;
+        padding: 0;
+    }
+
+    /* bootstrap 4 tweaks
+*/
+    .switch-light.row {
+        display: flex;
+    }
+
+    .switch-light .alert-light {
+        color: #333;
+    }
+
+    /* Candy Theme
+ * Based on the "Sort Switches / Toggles (PSD)" by Ormal Clarck
+ * http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/
+ */
+    .switch-light.switch-candy>span {
+        background-color: rgb(77, 76, 108);
+        border-radius: 3px;
+        box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .switch-light.switch-candy span span,
+    .switch-light.switch-candy input:checked~span span:first-child {
+        color: #fff;
+        text-align: center;
+    }
+}

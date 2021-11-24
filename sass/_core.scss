@@ -1,0 +1,116 @@
+/* ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ********
+ *                                               VARIABLES                                                   *
+ * ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ********/
+//Media Query Sizes
+$tablet-size: 768px;
+$desktop-size: 1024px;
+
+//Colors
+$color-primary: rgb(77, 76, 111);
+$color-secondary: rgb(116, 119, 186);
+$color-tertiary: rgb(145, 199, 148);
+$color-lightgray: rgb(247, 247, 247);
+$color-darkgray: rgb(119, 119, 119);
+$color-darkdarkgray: rgb(75, 75, 75);
+
+
+/* ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ********
+ *                                               CSS RESET                                                   *
+ * ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ********/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ********
+ *                                                  GLOBALS                                                  *
+ * ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ******** ********/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: .9em;
+    text-transform: uppercase;
+    margin-left: -9px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: rgb(80, 80, 80);
+}

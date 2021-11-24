@@ -1,0 +1,13 @@
+@mixin tablet-mq {
+    @media (min-width: $tablet-size)
+    {
+        @content;
+    }
+
+}
+@mixin desktop-mq {
+    @media (min-width: $desktop-size)
+    {
+        @content;
+    }
+}
